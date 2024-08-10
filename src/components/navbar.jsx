@@ -5,8 +5,8 @@ import Link from "next/link";
 import { hamburger } from "../../public/assets/icons";
 const Navbar = () => {
   return (
-    <header>
-      <nav className="max-container  padding-x py-8 flex items-center justify-between">
+    <header className=" absolute w-full z-30 ">
+      <nav className=" max-container padding-x py-8   flex items-center justify-between  ">
         <div>
           <Link href={"/"}>
             <Image
@@ -18,7 +18,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="hidden lg:block">
-          <ul className="flex items-center gap-12 text-lg font-montserrat text-slate-gray tracking-normal  leading-normal">
+          <ul className="flex items-center gap-14 text-lg font-montserrat text-slate-gray tracking-normal  leading-normal">
             {navLinks.map((navLink) => (
               <li key={navLink.href}>
                 <a href={navLink.href}>{navLink.label}</a>{" "}
@@ -32,15 +32,8 @@ const Navbar = () => {
           <a href="/">Explore now</a>
         </div>
         {/* mobile hamburger menu */}
-        <div className="flex items-center justify-center">
-          {
-            <Image
-              className="lg:hidden"
-              src={hamburger}
-              height={20}
-              width={20}
-            />
-          }
+        <div className=" lg:hidden flex items-center justify-center">
+          {<Image src={hamburger} height={20} width={20} />}
         </div>
       </nav>
     </header>
