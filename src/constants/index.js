@@ -5,7 +5,7 @@ import {
   support,
   truckFast,
   twitter,
-} from "../assets/icons";
+} from "../../public/assets/icons";
 import {
   bigShoe1,
   bigShoe2,
@@ -19,7 +19,7 @@ import {
   thumbnailShoe1,
   thumbnailShoe2,
   thumbnailShoe3,
-} from "../assets/images";
+} from "../../public/assets/images";
 
 export const navLinks = [
   { href: "#home", label: "Home" },
