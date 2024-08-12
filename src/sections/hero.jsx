@@ -58,16 +58,16 @@ const Hero = () => {
           width={450}
           height={450}
           src={currentShoeImage}
-          className="object-cover pt-20 pb-10 z-[-1] max-w-full max-h-full"
+          className="object-cover max-xl:pt-[30px] max-xl:pb-[90px] z-[-1] "
         />
 
-        <div className="flex gap-4 left-[10%] absolute bottom-0 translate-y-[35%]">
+        <div className="flex gap-4 left-[10%] absolute bottom-0 translate-y-[30%] ">
           {shoes.map((shoe) => {
             return (
               <div
                 onClick={() => onSelectShoeImage(shoe)}
                 key={shoe.thumbnail}
-                className={`flex items-center justify-center h-20 w-20 lg:h-32 lg:w-32 bg-card bg-center bg-cover rounded-lg cursor-pointer ${
+                className={`flex items-center justify-center h-[90px] w-[90px] lg:h-32 lg:w-32 bg-card bg-center bg-cover rounded-lg cursor-pointer ${
                   currentShoeImage === shoe.bigShoe
                     ? "border-coral-red border-2"
                     : "border-pale-blue border-2"
@@ -75,10 +75,8 @@ const Hero = () => {
               >
                 <Image
                   src={shoe.thumbnail}
-                  height={120}
-                  width={80}
                   alt="shoe thumbnail"
-                  className="max-w-full max-h-full"
+                  className="w-full h-full"
                 />
               </div>
             );
