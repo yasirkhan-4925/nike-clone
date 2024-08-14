@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <link rel="icon" type="image/vnd.icon" href="/assets/favicon.ico"></link>
-      <body className={inter.className}>{children}</body>
+      <body className={`antialiased ${inter.className}`}>{children}</body>
     </html>
   );
 }

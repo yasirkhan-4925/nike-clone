@@ -1,10 +1,16 @@
 import Image from "next/image";
 import { arrowRight } from "../../public/assets/icons";
-export default function Button({ buttonText }) {
+export default function Button({ buttonText, buttonIcon, isWhiteButton }) {
   return (
-    <button className=" flex items-center justify-center mt-5  gap-3 bg-coral-red py-4 px-7 text-md font-montserrat tracking-normal  text-white rounded-full">
+    <button
+      className={`${
+        isWhiteButton
+          ? "bg-white border-[1px]  border-slate-gray text-slate-gray"
+          : "bg-coral-red text-white"
+      }   flex items-center justify-center mt-5  gap-3  py-4 px-7 text-md font-montserrat tracking-normal   rounded-full`}
+    >
       {buttonText}
-      <Image src={arrowRight} />
+      {buttonIcon && <Image src={buttonIcon} />}
     </button>
   );
 }

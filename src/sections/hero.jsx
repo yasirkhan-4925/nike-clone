@@ -4,6 +4,7 @@ import Image from "next/image";
 import { collectionBackground, bigShoe1 } from "../../public/assets/images";
 import Button from "@/components/button";
 import { shoes, statistics } from "@/constants";
+import { arrowRight } from "../../public/assets/icons";
 
 const Hero = () => {
   const [currentShoeImage, setCurrentShoeImage] = useState(bigShoe1);
@@ -14,7 +15,7 @@ const Hero = () => {
 
   return (
     <section className="flex flex-col xl:flex-row w-full max-container min-h-screen gap-20">
-      <div className="xl:w-2/5 xl:padding-l padding-l flex flex-col items-start z-10 pt-28 max-xl:pt-24">
+      <div className="xl:w-2/5 xl:padding-l padding-l flex flex-col items-start z-10 pt-28 max-xl:pt-24 max-sm:padding-x">
         <p className="font-montserrat text-lg text-coral-red font-medium">
           Our Summer collections
         </p>
@@ -29,7 +30,7 @@ const Hero = () => {
           Discover stylish Nike arrivals, quality comfort, and innovation for
           your active life.
         </p>
-        <Button buttonText={"Shop Now"} />
+        <Button buttonText={"Shop Now"} buttonIcon={arrowRight} />
 
         <div className="flex gap-5 sm:gap-10 flex-wrap mt-9">
           {statistics.map((stats) => {
