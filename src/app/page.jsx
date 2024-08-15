@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import AboutUs from "@/sections/aboutUs";
+import ContactUs from "@/sections/contactUs";
 import Hero from "@/sections/hero";
 import PopularProducts from "@/sections/popularProducts";
 import Reviews from "@/sections/review";
@@ -16,6 +17,7 @@ const Home = () => {
       <Services />
       <SpecialOffers />
       <Reviews />
+      <ContactUs />
     </main>
   );
 };

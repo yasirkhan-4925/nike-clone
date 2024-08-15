@@ -27,10 +27,7 @@ export default function SpecialOffers() {
           desires, surpassing the loftiest expectations. Your journey with us is
           nothing short of exceptional.
         </p>
-        <div
-          className=" flex-col flex  mt-3  sm:flex-row sm:gap-4 
-        "
-        >
+        <div className="flex-col flex mt-3 sm:flex-row gap-y-3 sm:gap-4">
           <Button buttonText={"Shop Now"} buttonIcon={arrowRight} />
 
           <Button buttonText={"Learn more"} isWhiteButton />

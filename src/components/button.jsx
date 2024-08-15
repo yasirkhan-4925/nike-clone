@@ -7,7 +7,9 @@ export default function Button({ buttonText, buttonIcon, isWhiteButton }) {
         isWhiteButton
           ? "bg-white border-[1px]  border-slate-gray text-slate-gray"
           : "bg-coral-red text-white"
-      }   flex items-center justify-center mt-5  gap-3  py-4 px-7 text-md font-montserrat tracking-normal   rounded-full`}
+      }   flex items-center ${
+        buttonIcon ? "justify-between" : "justify-center"
+      }  gap-3  py-4 px-7 text-md font-montserrat tracking-normal   rounded-full`}
     >
       {buttonText}
       {buttonIcon && <Image src={buttonIcon} />}

@@ -30,7 +30,9 @@ const Hero = () => {
           Discover stylish Nike arrivals, quality comfort, and innovation for
           your active life.
         </p>
-        <Button buttonText={"Shop Now"} buttonIcon={arrowRight} />
+        <div className="mt-5">
+          <Button buttonText={"Shop Now"} buttonIcon={arrowRight} />
+        </div>
 
         <div className="flex gap-5 sm:gap-10 flex-wrap mt-9">
           {statistics.map((stats) => {
@@ -62,7 +64,7 @@ const Hero = () => {
           className="object-cover max-xl:pt-[30px] max-xl:pb-[90px] z-[-1] "
         />
 
-        <div className="flex gap-4 left-[10%] absolute bottom-0 translate-y-[30%] ">
+        <div className="flex gap-4 left-[10%] absolute bottom-0 translate-y-[30%] flex-wrap ">
           {shoes.map((shoe) => {
             return (
               <div
