@@ -3,7 +3,7 @@ import { headerLogo } from "../../public/assets/images";
 import { navLinks } from "@/constants";
 import Link from "next/link";
 import { hamburger } from "../../public/assets/icons";
-const Navbar = () => {
+const Navbar = ({ setToggleMobileNav }) => {
   return (
     <header className=" absolute w-full z-30 ">
       <nav className=" max-container padding-x py-8   flex items-center justify-between  ">
@@ -32,7 +32,10 @@ const Navbar = () => {
           <a href="/">Explore now</a>
         </div>
         {/* mobile hamburger menu */}
-        <div className=" lg:hidden flex items-center justify-center">
+        <div
+          onClick={() => setToggleMobileNav(true)}
+          className=" lg:hidden flex items-center justify-center"
+        >
           {<Image src={hamburger} height={20} width={20} />}
         </div>
       </nav>
