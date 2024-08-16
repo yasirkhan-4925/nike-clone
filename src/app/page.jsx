@@ -10,6 +10,7 @@ import PopularProducts from "@/sections/popularProducts";
 import Reviews from "@/sections/review";
 import Services from "@/sections/services";
 import SpecialOffers from "@/sections/specialOffers";
+import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 const Home = () => {
@@ -17,11 +18,16 @@ const Home = () => {
 
   return (
     <main className="min-h-screen relative">
-      {isMobileNavOpen ? (
-        <MobileNav setToggleMobileNav={setToggleMobileNav} />
-      ) : null}
+      <AnimatePresence>
+        {isMobileNavOpen ? (
+          <MobileNav setToggleMobileNav={setToggleMobileNav} />
+        ) : null}
+      </AnimatePresence>
 
-      <Navbar toggleMobile setToggleMobileNav={setToggleMobileNav} />
+      <Navbar
+        isOpen={isMobileNavOpen}
+        setToggleMobileNav={setToggleMobileNav}
+      />
       <Hero />
       <PopularProducts />
       <AboutUs />
